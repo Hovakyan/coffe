@@ -15,9 +15,6 @@ public class Post {
     private Integer componentsugar;
     private Integer componentwater;
 
-
-
-
     private Integer incoins;
     private Integer returncoins;
 
