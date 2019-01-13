@@ -21,7 +21,7 @@ public class Components {
     private Integer id;
 
     @Column
-    private Integer coffecount;
+    private Integer coffeecount;
     @Column
     private Integer sugarcount;
     @Column

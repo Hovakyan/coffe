@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class Post {
 
 
-    private Integer componentcoffe;
+    private Integer componentcoffee;
     private Integer componentsugar;
     private Integer componentwater;
 
@@ -22,7 +22,7 @@ public class Post {
     boolean coffe;
     boolean sugar;
 
-    private Integer coffecount;
+    private Integer coffeecount;
     private Integer sugarcount;
     private Integer watercount;
     private Integer id;

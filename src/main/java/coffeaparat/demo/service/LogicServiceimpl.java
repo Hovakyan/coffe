@@ -20,7 +20,7 @@ public class LogicServiceimpl implements LogicService{
     public void add(Post post, Map<String, Object> map) {
 
         Components components = new Components();
-        components.setCoffecount(post.getCoffecount());
+        components.setCoffeecount(post.getCoffeecount());
         components.setSugarcount(post.getSugarcount());
         components.setWatercount(post.getWatercount());
         componentRepository.save(components);
@@ -30,12 +30,12 @@ public class LogicServiceimpl implements LogicService{
     @Override
     public void coffe(Post post, List<String> answer) {
 
-    if (post.getIncoins()>=100 && componentRepository.queryById(1).getCoffecount() >0
+    if (post.getIncoins()>=100 && componentRepository.queryById(1).getCoffeecount() >0
     && componentRepository.queryById(1).getSugarcount() > 0 && componentRepository.queryById(1).getWatercount() > 0){
     if (post.isCoffe()){
     post.setIncoins(post.getIncoins()-100);
 
-    componentRepository.queryById(1).setCoffecount(componentRepository.queryById(1).getCoffecount()-1);
+    componentRepository.queryById(1).setCoffeecount(componentRepository.queryById(1).getCoffeecount()-1);
     componentRepository.queryById(1).setWatercount(componentRepository.queryById(1).getWatercount()-1);
     componentRepository.flush();
             }
@@ -64,8 +64,8 @@ public class LogicServiceimpl implements LogicService{
     @Override
     public void edite(Post post, Map<String, Object> map) {
 
-        if (componentRepository.findAll().get(0).getCoffecount()!=(null)){
-            componentRepository.queryById(post.getId()).setCoffecount(post.getCoffecount());
+        if (componentRepository.findAll().get(0).getCoffeecount()!=(null)){
+            componentRepository.queryById(post.getId()).setCoffeecount(post.getCoffeecount());
             componentRepository.queryById(post.getId()).setSugarcount(post.getSugarcount());
             componentRepository.queryById(post.getId()).setWatercount(post.getWatercount());
             componentRepository.flush();
